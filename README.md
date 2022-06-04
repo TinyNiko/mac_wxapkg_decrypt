@@ -5,6 +5,10 @@
 
 本代码只用于个人技术研究交流使用，不得用于商业用途。
 
+## 2022.6.4 update
+
+[issue](https://github.com/TinyNiko/mac_wxapkg_decrypt/issues/1) 中提到，小程序的 key 跟数据库加密的 key 是同一个，我分析了一下发现这个 key 是通过请求获取的，也就是说我们并没有办法分析到key的生成逻辑。
+
 ## 说明
 
 致敬[BlackTrace/pc_wxapkg_decrypt](https://github.com/BlackTrace/pc_wxapkg_decrypt)。 同样是不想用移动端提取wxapkg, 所以分析了一下mac端的解密逻辑。该项目是把wxapkg解密。目前微信MAC版本为： **3.4.0** .
@@ -37,4 +41,4 @@ Mac加密方法比较简单， 取wxapkg的前1024个字节，通过 AES_ECB 进
 
 不过就算我们不知道key的生成逻辑，只要有这个key就够了。
 
-最后，如果有同学想逆向key逻辑的，欢迎交流。
+~~最后，如果有同学想逆向key逻辑的，欢迎交流。~~
