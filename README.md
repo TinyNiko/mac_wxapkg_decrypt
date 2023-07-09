@@ -7,7 +7,7 @@
 
 ## 说明
 
-致敬[BlackTrace/pc_wxapkg_decrypt](https://github.com/BlackTrace/pc_wxapkg_decrypt)。 同样是不想用移动端提取wxapkg, 所以分析了一下mac端的解密逻辑。该项目是把wxapkg解密。目前微信MAC版本为： **3.4.0** .
+致敬[BlackTrace/pc_wxapkg_decrypt](https://github.com/BlackTrace/pc_wxapkg_decrypt)。 同样是不想用移动端提取wxapkg, 所以分析了一下mac端的解密逻辑。该项目是把wxapkg解密。当前支持的微信MAC版本为： **[3.4.0, 3.8.0)**。 暂不支持 **3.8.0**, 整个逻辑都不一样了，需要重新分析。
 
 ## 使用方法
 
