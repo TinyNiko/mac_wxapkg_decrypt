@@ -5,13 +5,26 @@
 
 本代码只用于个人技术研究交流使用，不得用于商业用途。
 
+## 2023.7.9 update
+
+**3.8.0** 使用了新的架构， 原来的代码已经不适用了。不过好在新版本未加密wxapkg, 所以可以直接解包。具体操作请参考**说明**
+
+
 ## 2022.6.4 update
 
 [issue](https://github.com/TinyNiko/mac_wxapkg_decrypt/issues/1) 中提到，小程序的 key 跟数据库加密的 key 是同一个，我分析了一下发现这个 key 是通过请求获取的，也就是说我们并没有办法分析到key的生成逻辑。
 
 ## 说明
 
-致敬[BlackTrace/pc_wxapkg_decrypt](https://github.com/BlackTrace/pc_wxapkg_decrypt)。 同样是不想用移动端提取wxapkg, 所以分析了一下mac端的解密逻辑。该项目是把wxapkg解密。当前支持的微信MAC版本为： **[3.4.0, 3.8.0)**。 暂不支持 **3.8.0**, 整个逻辑都不一样了，需要重新分析。
+致敬[BlackTrace/pc_wxapkg_decrypt](https://github.com/BlackTrace/pc_wxapkg_decrypt)。 同样是不想用移动端提取wxapkg, 所以分析了一下mac端的解密逻辑。该项目是把wxapkg解密。当前支持的微信MAC版本为： **[3.4.0, 3.8.0)**。 
+
+**3.8.0** 采用了新的架构， 这个代码已经不适合了，不过好在wxapkg 未加密。可以直接在
+
+```
+/Users/xxx/Library/Containers/com.tencent.xinWeChat/Data/.wxapplet/packages/wx18ded455ed95f695/15
+```
+
+目录中找到一个**__APP__.wxapkg**， 这是未加密的包，可以直接使用。 至此， 这个 mac 解密库就不需要了。
 
 ## 使用方法
 
